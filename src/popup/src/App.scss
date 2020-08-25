@@ -1,0 +1,131 @@
+.app {
+  $parent: &;
+  background-color: #F3F3F3;
+  color: #222;
+  font-size: 14px;
+  max-height: 650px;
+  min-width: 500px;
+  overflow-y: auto;
+
+  &__header {
+    background-color: #323232;
+    color: #EBEBEB;
+    padding: 0.5rem;
+  }
+
+  &__input {
+    background-color: #fff;
+    display: flex;
+    min-height: 40px;
+
+    &--top {
+      padding: 0.75rem;
+    }
+
+    &--bottom {
+      padding: 0 0.75rem 0.75rem;
+    }
+
+    input {
+      background-color: #F3F3F3;
+      border: 0;
+      border-radius: 100px;
+      flex-grow: 2;
+      margin-right: 14px;
+      padding: 0.5rem 0.8rem;
+    }
+
+    button {
+      align-items: center;
+      background-color: #3CC938;
+      border: 0;
+      border-radius: 100%;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      flex-grow: 0;
+      min-width: 40px;
+      padding: 0.5rem;
+
+      svg {
+        fill: white;
+        margin-left: 4px;
+        width: 16px;
+      }
+    }
+  }
+
+  &__day {
+    background-color: white;
+    border: 0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 3px 0px;
+    margin: 1rem 0;
+  }
+
+  &__day-header {
+    display: flex;
+    flex-flow: row;
+    font-weight: 700;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+
+  &__day-data {
+    display: flex;
+    flex-flow: row;
+    font-weight: 700;
+    justify-content: space-between;
+    padding: 1.2rem 1rem;
+  }
+
+  &__tracking {
+    padding: 1rem;
+  }
+
+  &__item {
+    align-items: center;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+
+    &:not(first-child), &:not(last-child) {
+      border-bottom: 1px solid #F3F3F3;
+    }
+
+    #{$parent}__item-text {
+      text-align: left;
+      line-height: 14px;
+    }
+
+    #{$parent}__item-controls {
+      text-align: right;
+
+      button {
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+
+        svg {
+          fill: #a3a3a3;
+          margin: 0.5rem;
+          width: 15px;
+        }
+      }
+    }
+
+    &:hover {
+      background-color: #F3F3F3;
+
+      #{$parent}__item-controls {
+        button {
+          svg {
+            fill: #222;
+          }
+        }
+      }
+    }
+  }
+}
