@@ -8,9 +8,25 @@
   overflow-y: auto;
 
   &__header {
+    align-items: center;
     background-color: #323232;
     color: #EBEBEB;
+    display: flex;
+    height: 25px;
+    justify-content: space-between;
     padding: 0.5rem;
+
+    .logo {
+      font-weight: 900;
+    }
+
+    a {
+      color: white;
+
+      &:hover {
+        color: #ccc;
+      }
+    }
   }
 
   &__input {
@@ -53,6 +69,11 @@
         width: 16px;
       }
     }
+
+    select {
+      border: 1px solid #7b7b7b;
+      border-radius: 5px;
+    }
   }
 
   &__day {
@@ -67,6 +88,7 @@
   &__day-header {
     display: flex;
     flex-flow: row;
+    font-size: 12px;
     font-weight: 700;
     justify-content: space-between;
     padding: 0 1rem;
@@ -98,6 +120,15 @@
     #{$parent}__item-text {
       text-align: left;
       line-height: 14px;
+
+      p {
+        margin: 0.25rem 0;
+      }
+
+      &--subtitle {
+        color: #7b7b7b;
+        font-style: italic;
+      }
     }
 
     #{$parent}__item-controls {

@@ -34,7 +34,10 @@ const App = () => {
 
   return (
     <div className="app">
-      <div className="app__header">WE MAKE WEBSITES - TOGGLE</div>
+      <div className="app__header">
+        <span className="logo">WE MAKE WEBSITES - TOGGLE</span>
+        <a href="#">See output</a>
+        </div>
       <div className="app__input app__input--top">
         <input type="text" placeholder="What are you working on?"></input>
         <button><PlayButton /></button>
@@ -65,8 +68,8 @@ const App = () => {
             return (
               <div className="app__item">
                 <div className="app__item-text">
-                  <p>{item.title}</p>
-                  <p>{item.project}</p>
+                  <p className="app__item-text--title">{item.title}</p>
+                  <p className="app__item-text--subtitle">{item.project}</p>
                 </div>
                 <div className="app__item-controls">
                   <p>{item.time}</p>

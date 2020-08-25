@@ -85,7 +85,7 @@ const ForwardRef = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.for
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".app {\n  background-color: #F3F3F3;\n  color: #222;\n  font-size: 14px;\n  max-height: 650px;\n  min-width: 500px;\n  overflow-y: auto; }\n  .app__header {\n    background-color: #323232;\n    color: #EBEBEB;\n    padding: 0.5rem; }\n  .app__input {\n    background-color: #fff;\n    display: flex;\n    min-height: 40px; }\n    .app__input--top {\n      padding: 0.75rem; }\n    .app__input--bottom {\n      padding: 0 0.75rem 0.75rem; }\n    .app__input input {\n      background-color: #F3F3F3;\n      border: 0;\n      border-radius: 100px;\n      flex-grow: 2;\n      margin-right: 14px;\n      padding: 0.5rem 0.8rem; }\n    .app__input button {\n      align-items: center;\n      background-color: #3CC938;\n      border: 0;\n      border-radius: 100%;\n      cursor: pointer;\n      display: flex;\n      justify-content: center;\n      flex-grow: 0;\n      min-width: 40px;\n      padding: 0.5rem; }\n      .app__input button svg {\n        fill: white;\n        margin-left: 4px;\n        width: 16px; }\n  .app__day {\n    background-color: white;\n    border: 0;\n    border-radius: 8px;\n    box-sizing: border-box;\n    box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 3px 0px;\n    margin: 1rem 0; }\n  .app__day-header {\n    display: flex;\n    flex-flow: row;\n    font-weight: 700;\n    justify-content: space-between;\n    padding: 0 1rem; }\n  .app__day-data {\n    display: flex;\n    flex-flow: row;\n    font-weight: 700;\n    justify-content: space-between;\n    padding: 1.2rem 1rem; }\n  .app__tracking {\n    padding: 1rem; }\n  .app__item {\n    align-items: center;\n    display: flex;\n    flex-flow: row;\n    justify-content: space-between;\n    padding: 0.5rem 1rem; }\n    .app__item:not(first-child), .app__item:not(last-child) {\n      border-bottom: 1px solid #F3F3F3; }\n    .app__item .app__item-text {\n      text-align: left;\n      line-height: 14px; }\n    .app__item .app__item-controls {\n      text-align: right; }\n      .app__item .app__item-controls button {\n        background-color: transparent;\n        border: 0;\n        cursor: pointer; }\n        .app__item .app__item-controls button svg {\n          fill: #a3a3a3;\n          margin: 0.5rem;\n          width: 15px; }\n    .app__item:hover {\n      background-color: #F3F3F3; }\n      .app__item:hover .app__item-controls button svg {\n        fill: #222; }\n", ""]);
+exports.push([module.i, ".app {\n  background-color: #F3F3F3;\n  color: #222;\n  font-size: 14px;\n  max-height: 650px;\n  min-width: 500px;\n  overflow-y: auto; }\n  .app__header {\n    align-items: center;\n    background-color: #323232;\n    color: #EBEBEB;\n    display: flex;\n    height: 25px;\n    justify-content: space-between;\n    padding: 0.5rem; }\n    .app__header .logo {\n      font-weight: 900; }\n    .app__header a {\n      color: white; }\n      .app__header a:hover {\n        color: #ccc; }\n  .app__input {\n    background-color: #fff;\n    display: flex;\n    min-height: 40px; }\n    .app__input--top {\n      padding: 0.75rem; }\n    .app__input--bottom {\n      padding: 0 0.75rem 0.75rem; }\n    .app__input input {\n      background-color: #F3F3F3;\n      border: 0;\n      border-radius: 100px;\n      flex-grow: 2;\n      margin-right: 14px;\n      padding: 0.5rem 0.8rem; }\n    .app__input button {\n      align-items: center;\n      background-color: #3CC938;\n      border: 0;\n      border-radius: 100%;\n      cursor: pointer;\n      display: flex;\n      justify-content: center;\n      flex-grow: 0;\n      min-width: 40px;\n      padding: 0.5rem; }\n      .app__input button svg {\n        fill: white;\n        margin-left: 4px;\n        width: 16px; }\n    .app__input select {\n      border: 1px solid #7b7b7b;\n      border-radius: 5px; }\n  .app__day {\n    background-color: white;\n    border: 0;\n    border-radius: 8px;\n    box-sizing: border-box;\n    box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 3px 0px;\n    margin: 1rem 0; }\n  .app__day-header {\n    display: flex;\n    flex-flow: row;\n    font-size: 12px;\n    font-weight: 700;\n    justify-content: space-between;\n    padding: 0 1rem; }\n  .app__day-data {\n    display: flex;\n    flex-flow: row;\n    font-weight: 700;\n    justify-content: space-between;\n    padding: 1.2rem 1rem; }\n  .app__tracking {\n    padding: 1rem; }\n  .app__item {\n    align-items: center;\n    display: flex;\n    flex-flow: row;\n    justify-content: space-between;\n    padding: 0.5rem 1rem; }\n    .app__item:not(first-child), .app__item:not(last-child) {\n      border-bottom: 1px solid #F3F3F3; }\n    .app__item .app__item-text {\n      text-align: left;\n      line-height: 14px; }\n      .app__item .app__item-text p {\n        margin: 0.25rem 0; }\n      .app__item .app__item-text--subtitle {\n        color: #7b7b7b;\n        font-style: italic; }\n    .app__item .app__item-controls {\n      text-align: right; }\n      .app__item .app__item-controls button {\n        background-color: transparent;\n        border: 0;\n        cursor: pointer; }\n        .app__item .app__item-controls button svg {\n          fill: #a3a3a3;\n          margin: 0.5rem;\n          width: 15px; }\n    .app__item:hover {\n      background-color: #F3F3F3; }\n      .app__item:hover .app__item-controls button svg {\n        fill: #222; }\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -218,12 +218,28 @@ const App = () => {
       lineNumber: 37,
       columnNumber: 7
     }
-  }, "WE MAKE WEBSITES - TOGGLE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "app__input app__input--top",
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "logo",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 38,
+      columnNumber: 9
+    }
+  }, "WE MAKE WEBSITES - TOGGLE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39,
+      columnNumber: 9
+    }
+  }, "See output")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "app__input app__input--top",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41,
       columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -232,21 +248,21 @@ const App = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39,
+      lineNumber: 42,
       columnNumber: 9
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40,
+      lineNumber: 43,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_svgr_webpack_svgo_titleProp_ref_play_button_svg__WEBPACK_IMPORTED_MODULE_1__["ReactComponent"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40,
+      lineNumber: 43,
       columnNumber: 17
     }
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -254,7 +270,7 @@ const App = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42,
+      lineNumber: 45,
       columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -263,63 +279,63 @@ const App = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43,
+      lineNumber: 46,
       columnNumber: 9
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44,
+      lineNumber: 47,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45,
+      lineNumber: 48,
       columnNumber: 11
     }
   }, "None"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 49,
       columnNumber: 11
     }
   }, "Billable"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 50,
       columnNumber: 11
     }
   }, "QA"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 51,
       columnNumber: 11
     }
   }, "Non-billable"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49,
+      lineNumber: 52,
       columnNumber: 11
     }
   }, "Deployment"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
+      lineNumber: 53,
       columnNumber: 11
     }
   }, "Training"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 54,
       columnNumber: 11
     }
   }, "UAT"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -327,7 +343,7 @@ const App = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54,
+      lineNumber: 57,
       columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -335,21 +351,21 @@ const App = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55,
+      lineNumber: 58,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56,
+      lineNumber: 59,
       columnNumber: 11
     }
   }, "Today: 6h 18m"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57,
+      lineNumber: 60,
       columnNumber: 11
     }
   }, "This week: 14h 10m")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -357,7 +373,7 @@ const App = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59,
+      lineNumber: 62,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -365,21 +381,21 @@ const App = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60,
+      lineNumber: 63,
       columnNumber: 11
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61,
+      lineNumber: 64,
       columnNumber: 13
     }
   }, "Tue, 25 Aug"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62,
+      lineNumber: 65,
       columnNumber: 13
     }
   }, "6:18:47")), testArray.map(item => {
@@ -388,7 +404,7 @@ const App = () => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 66,
+        lineNumber: 69,
         columnNumber: 15
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -396,21 +412,23 @@ const App = () => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 67,
+        lineNumber: 70,
         columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: "app__item-text--title",
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 68,
+        lineNumber: 71,
         columnNumber: 19
       }
     }, item.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: "app__item-text--subtitle",
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 69,
+        lineNumber: 72,
         columnNumber: 19
       }
     }, item.project)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -418,28 +436,28 @@ const App = () => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 71,
+        lineNumber: 74,
         columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 72,
+        lineNumber: 75,
         columnNumber: 19
       }
     }, item.time), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 73,
+        lineNumber: 76,
         columnNumber: 19
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_svgr_webpack_svgo_titleProp_ref_play_button_svg__WEBPACK_IMPORTED_MODULE_1__["ReactComponent"], {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 73,
+        lineNumber: 76,
         columnNumber: 27
       }
     }))));
@@ -670,5 +688,5 @@ module.exports = __webpack_require__(/*! /Users/alexgronmark/Desktop/Dev/Persona
 
 /***/ })
 
-},[[0,"runtime-main",1]]]);
+},[[0,"runtime-main",0]]]);
 //# sourceMappingURL=main.chunk.js.map
