@@ -5,10 +5,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const router = express_1.default.Router();
-const schema_controllers_1 = require("../controllers/schema.controllers");
-router.get('/', schema_controllers_1.testController);
-router.get('/test', (res) => {
-    res.send("penis");
-});
+const logtime_controllers_1 = require("../controllers/logtime.controllers");
+router.post('/createLogtime', logtime_controllers_1.logtimeController);
+router.put('/stopLogTime', logtime_controllers_1.stopLogTime);
+router.put('/startLogTime', logtime_controllers_1.startLogTime);
 exports.default = router;
-//# sourceMappingURL=schema.routes.js.map
+//# sourceMappingURL=logtime.routes.js.map

@@ -18,6 +18,15 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importStar(require("mongoose"));
 const LogItemModel = new mongoose_1.Schema({
@@ -26,8 +35,22 @@ const LogItemModel = new mongoose_1.Schema({
     projectName: { type: String, required: true },
     billable: { type: Number, required: true },
     logArray: { type: Array, required: true, default: [] },
-    createdAt: { type: String, required: true },
+    createdAt: { type: Date, default: Date.now }
 });
+LogItemModel.methods.updateStopTime = function () {
+    return __awaiter(this, void 0, void 0, function* () {
+        this.logArray[this.logArray.length - 1].stop = Date.now();
+        return yield this.save();
+    });
+};
+LogItemModel.methods.updateStartTime = function () {
+    return __awaiter(this, void 0, void 0, function* () {
+        this.logArray.push({
+            start: Date.now()
+        });
+        return yield this.save();
+    });
+};
 const LogItem = mongoose_1.default.model('LogItemSchema', LogItemModel);
 exports.default = LogItem;
-//# sourceMappingURL=schema.model.js.map
+//# sourceMappingURL=logtime.model.js.map
