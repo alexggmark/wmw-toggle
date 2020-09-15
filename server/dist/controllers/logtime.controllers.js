@@ -15,10 +15,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.startLogTime = exports.stopLogTime = exports.logtimeController = void 0;
 const logtime_model_1 = __importDefault(require("../models/logtime.model"));
 exports.logtimeController = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    console.log(req.body);
     try {
         const request = new logtime_model_1.default(req.body);
         yield request.save();
-        console.log(req.body);
         res.send(request);
     }
     catch (err) {
@@ -26,6 +26,7 @@ exports.logtimeController = (req, res) => __awaiter(void 0, void 0, void 0, func
     }
 });
 exports.stopLogTime = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    console.log('stopLogTime');
     try {
         const request = yield logtime_model_1.default.findOne({ _id: req.body.id });
         if (request === null)
@@ -38,6 +39,7 @@ exports.stopLogTime = (req, res) => __awaiter(void 0, void 0, void 0, function* 
     }
 });
 exports.startLogTime = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    console.log('startLogTime');
     try {
         const request = yield logtime_model_1.default.findOne({ _id: req.body.id });
         if (request === null)

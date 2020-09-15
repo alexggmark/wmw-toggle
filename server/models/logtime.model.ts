@@ -1,16 +1,13 @@
 import mongoose, { Schema, Document } from 'mongoose'
 
-type LogTimeType = {
-  start: number,
-  stop: number | undefined
-}
-
 export interface LogItemInterface extends Document {
   userId: string,
   taskName: string,
   projectName: string,
   billable: number,
-  logArray: Array<LogTimeType>,
+  lastStart: Date,
+  logTime: number,
+  running: boolean,
   createdAt: Date,
   updateStopTime(): Promise<Function>,
   updateStartTime(): Promise<Function>
@@ -21,19 +18,24 @@ const LogItemModel: Schema = new Schema({
   taskName: { type: String, required: true },
   projectName: { type: String, required: true },
   billable: { type: Number, required: true },
-  logArray: { type: Array, required: true, default: [] },
+  lastStart: { type: Date, default: Date.now },
+  logTime: { type: Number, default: 0 },
   createdAt: { type: Date, default: Date.now }
 })
 
 LogItemModel.methods.updateStopTime = async function() {
-  this.logArray[this.logArray.length - 1].stop = Date.now()
+  const calculatedTime = await this.model('LogItemSchema').aggregate([
+    { $match: { _id: this._id } },
+    { $addFields: { currentTime: new Date() } },
+    { $project: { logTime: { $subtract: [ "$currentTime", "$lastStart" ] } } }
+  ])
+  console.log(`Calculated time: ${calculatedTime[0].logTime / 600}s`)
+  this.logTime += calculatedTime[0].logTime
   return await this.save()
 }
 
 LogItemModel.methods.updateStartTime = async function() {
-  this.logArray.push({
-    start: Date.now()
-  })
+  this.lastStart = Date.now()
   return await this.save()
 }
 

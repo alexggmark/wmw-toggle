@@ -34,20 +34,25 @@ const LogItemModel = new mongoose_1.Schema({
     taskName: { type: String, required: true },
     projectName: { type: String, required: true },
     billable: { type: Number, required: true },
-    logArray: { type: Array, required: true, default: [] },
+    lastStart: { type: Date, default: Date.now },
+    logTime: { type: Number, default: 0 },
     createdAt: { type: Date, default: Date.now }
 });
 LogItemModel.methods.updateStopTime = function () {
     return __awaiter(this, void 0, void 0, function* () {
-        this.logArray[this.logArray.length - 1].stop = Date.now();
+        const calculatedTime = yield this.model('LogItemSchema').aggregate([
+            { $match: { _id: this._id } },
+            { $addFields: { currentTime: new Date() } },
+            { $project: { logTime: { $subtract: ["$currentTime", "$lastStart"] } } }
+        ]);
+        console.log(`Calculated time: ${calculatedTime[0].logTime / 600}s`);
+        this.logTime += calculatedTime[0].logTime;
         return yield this.save();
     });
 };
 LogItemModel.methods.updateStartTime = function () {
     return __awaiter(this, void 0, void 0, function* () {
-        this.logArray.push({
-            start: Date.now()
-        });
+        this.lastStart = Date.now();
         return yield this.save();
     });
 };
