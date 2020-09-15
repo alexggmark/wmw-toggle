@@ -17,14 +17,11 @@ mongoose_1.default.connect(process.env.DB_CONNECTION, { useNewUrlParser: true, u
     return console.log('Connected');
 })
     .catch((err) => {
-    console.log('Error');
+    console.log(err);
 });
 app.use(body_parser_1.default.json());
 app.use(body_parser_1.default.urlencoded({ extended: true }));
 app.use(logtime_routes_1.default);
-// app.get('/', (req: Request, res: Response, next: NextFunction) => {
-//   res.send('Hello World')
-// })
 app.listen(port, () => {
     console.log(`Server running on ${port}`);
 });

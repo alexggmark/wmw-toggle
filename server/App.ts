@@ -14,16 +14,12 @@ mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true, useUnifiedT
     return console.log('Connected')
   })
   .catch((err) => {
-    console.log('Error')
+    console.log(err)
   })
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(LogTime)
-
-// app.get('/', (req: Request, res: Response, next: NextFunction) => {
-//   res.send('Hello World')
-// })
 
 app.listen(port, () => {
   console.log(`Server running on ${port}`)

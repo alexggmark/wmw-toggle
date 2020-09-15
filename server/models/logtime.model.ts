@@ -1,5 +1,4 @@
-import mongoose, { Schema, Document } from "mongoose"
-import { ResolveOptions } from "dns"
+import mongoose, { Schema, Document } from 'mongoose'
 
 type LogTimeType = {
   start: number,
